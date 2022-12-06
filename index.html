@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Shaded Spirits</title>
+    <link rel="icon" type="image/x-icon" href="./shadedspiritsfaviconv1.png">
+    <link href="./menu style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="menu">
+      <div id="title">
+        <h1 id="TITLE">SHADED SPIRITS</h1>
+      </div>
+      <br>
+      <div id="startButton">
+        <h2>Start Game</h2>
+      </div>
+    </div>
+    <script>
+      const buttonText = document.getElementById("startButton");
+
+      buttonText.addEventListener("click", buttonPressed);
+      buttonText.addEventListener("animationend", loadGame);
+
+      function buttonPressed(){
+        buttonText.style.animationPlayState = "running";
+      }
+      function loadGame(){
+        window.location.href = "./game.html";
+      }
+    </script>
+  </body>
+</html>
